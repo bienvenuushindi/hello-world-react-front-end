@@ -1,14 +1,14 @@
-import {applyMiddleware, combineReducers, configureStore} from "@reduxjs/toolkit";
-import randomGreetingReducer from "./greeting/reducer";
-import thunk from "redux-thunk";
+import { applyMiddleware, combineReducers, configureStore } from '@reduxjs/toolkit';
+import thunk from 'redux-thunk';
+import randomGreetingReducer from './greeting/reducer';
 
 const reducers = combineReducers({
-    randomGreeting: randomGreetingReducer
-})
+  randomGreeting: randomGreetingReducer,
+});
 
 const store = configureStore({
-        reducer: reducers,
-    },
-    applyMiddleware(thunk))
+  reducer: reducers,
+},
+applyMiddleware(thunk));
 
-export default store
+export default store;
